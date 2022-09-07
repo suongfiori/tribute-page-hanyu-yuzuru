@@ -139,6 +139,11 @@ main h3 {
   letter-spacing: 0.2rem;
   font-size: 1.5rem;
   color: #c4882f;
+  border: 2px solid #c4882f;
+  border-radius: 6px;
+  margin: 20px auto;
+  padding: 4px;
+  width: 40%;
 }
 
 main h2 {
