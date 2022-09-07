@@ -12,7 +12,7 @@
 
 html {
   font-size: 16px;
-  scroll-padding-top: 10rem;
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: auto 25%;
-  grid-template-rows: 150px auto 60px 60px;
+  grid-template-rows: 120px auto 60px 60px;
   grid-template-areas: "hd hd"
                       "main sidebar"
                       "gallery gallery"
@@ -40,7 +40,7 @@ footer {
 
 header {
     width: 100%;
-    height: 150px;
+    height: 120px;
     background: #141414;
     grid-area: hd;
     display: flex;
@@ -66,7 +66,7 @@ aside {
   justify-content: center;
   flex: 1;
   float: right;
-  margin: 60px 20px auto;
+  margin: 40px 20px auto;
   width: 100%;
   height: 800px;
   align-items: flex-start;
@@ -266,12 +266,9 @@ aside h3 {
 }
   
   /* gallery photos properties */
-.photo {
-  width: calc(33% - 6px);
+.container {
   overflow:hidden;
   height: fit-content;
-  margin: 4px;
-  padding: 0;
   display:block;
   position:relative;
   float:left;
@@ -281,65 +278,62 @@ aside h3 {
   position:absolute;
   display:block;
   cursor:pointer;
-  top: 35%;
+  top: 70%;
   display: none;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 1.2rem;
   text-shadow: 1px 5px 10px black;
   transition-duration: .3s;
 }
 
-.text{
+.text {
   position:absolute;
-  top: 70%;
+  top: 85%;
   cursor:pointer;
   max-width: 80%;
   text-align:center;
   left: 50%;
   text-shadow: 1px 5px 10px black;
-  font-size: 1em;
   display:none;
   margin-right: -50%;
   transition-duration: .3s;
   transform: translate(-50%, -50%) 
 }
 
-.photo:hover img{
-  transform: scale(1.2);
-  transition-duration: .3s;
-  filter: grayscale(50%);
-  opacity: .3;
+.container:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0);
 }
-.photo:hover span{
+.container:hover span {
   color:white;
   display: block;
   transition-duration: .3s;
+  opacity: .8;
+  padding: 3px;
+  background-color: #fba92c;
 }
 
 .gallery {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
   justify-content: center;
   align-items: center;
-  width: fit-content;
+  gap: 5px;
   margin: 0 auto;
-  height: auto;
-  background: #565656;
-  margin-left: auto;
-  margin-right: auto;
 }
   
 .gallery img {
-  width: 100%;
-  max-width: 350px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 5px;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    cursor:pointer;
+    margin-bottom: -5px;
+    filter:grayscale(100%);
+    transition: 1s;
 }
   
 .gallery::after {
