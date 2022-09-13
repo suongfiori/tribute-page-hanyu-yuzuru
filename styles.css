@@ -6,6 +6,12 @@
     }
   }
 
+  @media (max-width: 768px) {
+   aside {
+      width: 100%;
+    }
+  }
+
 * {
   box-sizing:border-box;
 }
@@ -28,7 +34,6 @@ body {
                       "footer footer";
 }
 
-header,
 main,
 aside,
 .gallery,
@@ -68,7 +73,7 @@ aside {
   float: right;
   margin: 40px 20px auto;
   width: 100%;
-  height: 800px;
+  height: auto;
   align-items: flex-start;
   border-radius: 5px;
   box-shadow: 10px 5px 5px #39603D;
@@ -93,8 +98,7 @@ footer {
   height: 100%;
 }
 .navigation-item {
-  margin: 0 30px;
-  font-size: large;
+  margin: 0 20px;
 }
 .navigation-item a {
   text-decoration: none;
@@ -128,7 +132,7 @@ h1 a {
 
 header h1 {
   color: #fff;
-  font-size: 4rem;
+  font-size: 5vw;
   font-weight: 900;
   letter-spacing: 0.2rem;
   margin-left: 30px;
@@ -139,11 +143,6 @@ main h3 {
   letter-spacing: 0.2rem;
   font-size: 1.5rem;
   color: #c4882f;
-  border: 2px solid #c4882f;
-  border-radius: 6px;
-  margin: 20px auto;
-  padding: 4px;
-  width: 40%;
 }
 
 main h2 {
@@ -154,7 +153,7 @@ main h2 {
 }
 
 aside h3 {
-  padding-top: 20px;
+  padding: 20px;
   font-family: 'Handlee', cursive, sans-serif;
   font-size: 1.3rem;
   color: #fff;
@@ -192,7 +191,7 @@ aside h3 {
   display: block;
   margin: 5px -5px auto;
   font-family: 'Handlee', cursive, sans-serif;
-  font-size: 4rem;
+  font-size: 5vw;
   font-weight: 800;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 3px #fff;
@@ -323,7 +322,7 @@ aside h3 {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-content: center;
   align-items: center;
   gap: 5px;
